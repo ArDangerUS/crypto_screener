@@ -1,8 +1,11 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-TELEGRAM_TOKEN = "7647749358:AAEMIsjETJV1-hTjzt5KuScksf2vAw4EOKM"
-TELEGRAM_CHANNEL = "@crypto_screener391"  # или "-1001234567890"
+load_dotenv()
 
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_CHANNEL = os.getenv("TELEGRAM_CHANNEL")
 
 def send_message(text):
     url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
