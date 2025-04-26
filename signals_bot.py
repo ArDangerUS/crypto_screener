@@ -10,7 +10,7 @@ load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHANNEL = os.getenv("TELEGRAM_CHANNEL")
 
-INTERVAL = Interval.INTERVAL_1_MINUTE
+INTERVAL = Interval.INTERVAL_1_MINUTE #put interval you need(reccomended 4+H)
 
 client = UMFutures()
 
